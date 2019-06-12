@@ -11,6 +11,7 @@ import ProductList from './Ecom/ProductList';
 import Details from './Ecom/Details';
 import Cart from './Ecom/Cart';
 import Default from './Ecom/Default';
+import Modal from './Ecom/Modal';
 
 // import MyComp from './MyComponent/MyComp';
 // import Counter from './Counter/Counter';
@@ -35,6 +36,8 @@ class App extends React.Component {
           <Route path="/cart" component={Cart} />
           <Route component={Default} />
         </Switch>
+
+        <Modal />
 
       </React.Fragment>
       // <div className="App">

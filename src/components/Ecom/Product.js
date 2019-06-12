@@ -5,6 +5,7 @@ import { ProductConsumer } from "../../context";
 import PropTypes from "prop-types";
 
 class Product extends Component {
+  
   render() {
     // console.log(this.props.product);
     const { id, title, img, price, inCart } = this.props.product;
@@ -14,11 +15,11 @@ class Product extends Component {
         <div className="card">
           <ProductConsumer>
             {value => (
+              // console.log(value),
+              // console.log("*****************"),
               <div
                 className="img-container p-5"
-                onClick={() => 
-                  value.handleDetail(id)
-                }
+                onClick={() => value.handleDetail(id)}
               >
                 <Link to="/details">
                   <img src={img} alt="product" className="card-img-top" />
@@ -27,8 +28,8 @@ class Product extends Component {
                   className="cart-btn"
                   disabled={inCart ? true : false}
                   onClick={() => {
-                    alert("cart Clicked");
-                    value.addCart(id)
+                    value.addCart(id);
+                    value.openModal(id);
                   }}
                 >
                   {inCart ? (
