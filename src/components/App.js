@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Ecom/Navbar';
 import ProductList from './Ecom/ProductList';
 import Details from './Ecom/Details';
-import Cart from './Ecom/Cart';
+import Cart from './Ecom/Cart/Cart';
 import Default from './Ecom/Default';
 import Modal from './Ecom/Modal';
 
